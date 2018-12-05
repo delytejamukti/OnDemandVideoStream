@@ -354,7 +354,7 @@
         var frame_size = $("#frame_size option:selected").val();
         var framerate = $("#framerate option:selected").val();
         
-        console.log(framerate);
+        console.log(id,"-",format,"-",frame_size,"-",framerate);
         setTimeout(function() {
         }, 300);
         waitingDialog.show('Converting',{
@@ -383,12 +383,9 @@
               }else{
                 console.log("gagal convert");
               }
+             
          }
         });
-
-
-
-         
       
       });
 

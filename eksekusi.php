@@ -9,10 +9,9 @@ if(isset($_POST['id']) && isset($_POST['format']) && isset($_POST['frame_size'])
     $nama_file = explode('.',$id);
 
 
-    // $command="ffmpeg\bin\\ffmpeg -i \uploaded\\".$id." ".$frame_size.$framerate." \\converted\\".$nama_file[0]."_converted".".".$format_;
     // ffmpeg\bin\ffmpeg -i \upload\teknologi.mp4 -s 230x236
     
-    $command = "ffmpeg\bin\\ffmpeg -i ".$id." -vf scale=".$frame_size.$framerate." converted\\".$nama_file[0]."_".$unik."_converted.".$format_;
+    $command = "ffmpeg\bin\\ffmpeg -i uploaded\\".$id." -vf scale=".$frame_size.$framerate." converted\\".$nama_file[0]."_".$unik."_converted.".$format_;
     $output_file="converted/".$nama_file[0]."_".$unik."_converted.".$format_;
     exec($command);
     if(file_exists($output_file)){
@@ -26,6 +25,8 @@ if(isset($_POST['id']) && isset($_POST['format']) && isset($_POST['frame_size'])
         header('Content-Type: application/json');
         echo json_encode($data);
     }
+
+
 
     
 }
