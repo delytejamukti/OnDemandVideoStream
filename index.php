@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-  $HOST = "192.168.100.53";
+  $HOST = "192.16.137.1";
   $SRC = "http://".$HOST.":8181/player.js";
   echo $SRC;
 ?>
@@ -383,15 +383,22 @@
            framerate:framerate},
          type: 'post',
          success: function(data) {
-              if(data.flag == "sukses"){
+              // if(data.flag == "sukses"){
+              //   waitingDialog.hide();
+              //   $("a[href='http://dummylink']").attr('href', data.linked );
+              //   $("#modal_download").modal('show');
+
+              // }else{
+              //   console.log("gagal convert");
+              //   waitingDialog.hide();
+              //   $("a[href='http://dummylink']").attr('href', data.linked );
+              //   $("#modal_download").modal('show');
+              // }
+				console.log(data.flag,data.linked,data.output);
                 waitingDialog.hide();
-                $("a[href='http://dummylink']").attr('href', data.link );
+                $("a[href='http://dummylink']").attr('href', data.linked );
                 $("#modal_download").modal('show');
 
-              }else{
-                console.log("gagal convert");
-              }
-             
          }
         });
       
