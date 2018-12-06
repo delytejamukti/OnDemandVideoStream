@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-  $HOST = "192.16.137.1";
+  $HOST = "10.151.254.137";
   $SRC = "http://".$HOST.":8181/player.js";
-  echo $SRC;
+  //echo $SRC;
 ?>
 <head>
   <meta charset="UTF-8">
@@ -313,7 +313,7 @@
   </div>
 </div>
 
-// modal download 
+ <!-- modal download -->
 
 <div class="modal fade" id="modal_download" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -334,7 +334,7 @@
 
 
 
-// selesai
+ <!-- selesai -->
 
 
 
