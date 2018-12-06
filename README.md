@@ -7,5 +7,6 @@ Daftar file Video :
 * Video3.mkv
 * Video4.mkv
 * Video5.mkv
+
 Lokasi file Video :
-* `.\`
+* `.\uploaded`
